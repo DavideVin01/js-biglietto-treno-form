@@ -37,15 +37,21 @@ buttonSend.addEventListener('click', function () {
     console.log(fullNameValue);
 
     const userKmValue = userKm.value;
-    console.log(userKmValue);
+    console.log(`${userKmValue}km`);
 
     const userAgeValue = userAge.value;
-    console.log(userAgeValue);
+    console.log(`${userAgeValue} anni`);
 
     const userAgeRangeValue = userAgeRange.value;
     console.log(userAgeRangeValue);
 
+    let ticketName = document.getElementById('ticket-fullname');
+    ticketName.innerHTML = fullNameValue;
 
+    fullName.value = '';
+    userKm.value = '';
+    userAge.value = '';
+    userAgeRange.value = '';
 });
 
 buttonDelete.addEventListener('click', function () {
