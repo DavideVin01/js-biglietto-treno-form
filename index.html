@@ -10,7 +10,36 @@
 </head>
 
 <body>
-    <h2>Calcola il prezzo del tuo biglietto</h2>
+    <section id="calcolate">
+        <h2>CALCOLA IL PREZZO DEL TUO BIGLIETTO</h2>
+        <div>
+            <label for="full-name">Nome Cognome</label>
+            <input id="full-name" type="text" name="full-name">
+        </div>
+        <div>
+            <label for="kms">Km da percorrere</label>
+            <input id="kms" type="text" name="kms">
+        </div>
+        <div>
+            <label for="age">Fascia d'età</label>
+            <select name="age" id="age">
+                <option id="overage" value="overage">Maggiorenne</option>
+                <option id="underage" value="underage">Minorenne</option>
+            </select>
+        </div>
+        <div>
+            <button>Genera</button>
+            <button>Annulla</button>
+        </div>
+    </section>
+    <section id="your-ticket">
+        <h2>IL TUO BIGLIETTO</h2>
+        <h3>DETTAGLIO PASSEGGERI</h3>
+        <div>
+            <div>NOME PASSEGGERO</div>
+            <span id="ticket-fullname"></span>
+        </div>
+    </section>
     <script src="js/script.js"></script>
 </body>
 

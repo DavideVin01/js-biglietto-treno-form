@@ -16,11 +16,17 @@ L'output del prezzo finale va messo fuori in forma umana (con massimo due decima
 */
 
 // #1 - #2
+/*
 let userKm = parseInt(prompt('Quanti chilometri devi percorrere?').trim());
 let userAge = parseInt(prompt('Quanti anni hai?').trim());
 
 console.log(`I chilometri da percorrere sono ${userKm}km`);
 console.log(`L'utente ha ${userAge} anni`);
+*/
+
+const fullnameElement = document.getElementById('full-name');
+const userKm = document.getElementById('kms');
+const userAge = document.getElementById('kms');
 
 
 // #3 - #3.1
@@ -44,5 +50,5 @@ if (!isNaN(userKm) && !isNaN(userAge)) {
         console.log(`Il prezzo del biglietto senza sconti è di ${costoTotale}€`);
     }
 } else {
-    alert('Non hai inserito dei numeri!!');
+    // alert('Non hai inserito dei numeri!!');
 }
