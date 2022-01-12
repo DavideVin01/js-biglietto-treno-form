@@ -24,36 +24,64 @@ console.log(`I chilometri da percorrere sono ${userKm}km`);
 console.log(`L'utente ha ${userAge} anni`);
 */
 
-const fullnameElement = document.getElementById('full-name');
+const buttonSend = document.getElementById('send');
+
+const fullName = document.getElementById('full-name');
 const userKm = document.getElementById('kms');
 const userAge = document.getElementById('age');
+const userAgeRange = document.getElementById('age-range');
 
-userKm.value = '';
-userAge.value = '';
+buttonSend.addEventListener('click', function () {
+    const fullNameValue = fullName.value;
+    console.log(fullNameValue);
 
-console.log(userKm, userAge);
+    const userKmValue = userKm.value;
+    console.log(userKmValue);
+
+    const userAgeValue = userAge.value;
+    console.log(userAgeValue);
+
+    const userAgeRangeValue = userAgeRange.value;
+    console.log(userAgeRangeValue);
+});
+
+if (fullName) {
+    fullName.innerHTML = fullNameValue;
+    fullName.value = '';
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 // #3 - #3.1
-if (!isNaN(userKm) && !isNaN(userAge)) {
+// if (!isNaN(userKm) && !isNaN(userAge)) {
 
-    let costoTotale = userKm * 0.21;
+//     let costoTotale = userKm * 0.21;
 
-    // #3.2 - #3.3
-    let prezzoScontato = 0;
+//     let prezzoScontato = 0;
 
-    if (0 < userAge && userAge < 18) {
-        prezzoScontato = .20;
-        costoTotale = (costoTotale - (costoTotale * prezzoScontato)).toFixed(2);
-        console.log(`Il prezzo del biglietto per i minorenni è di ${costoTotale}€`);
-    } else if (userAge >= 65 && userAge < 110) {
-        prezzoScontato = .40;
-        costoTotale = (costoTotale - (costoTotale * prezzoScontato)).toFixed(2);
-        console.log(`Il prezzo del biglietto per gli over 65 è di ${costoTotale}€`)
-    } else {
-        costoTotale = costoTotale.toFixed(2);
-        console.log(`Il prezzo del biglietto senza sconti è di ${costoTotale}€`);
-    }
-} else {
-    // alert('Non hai inserito dei numeri!!');
-}
+//     if (0 < userAge && userAge < 18) {
+//         prezzoScontato = .20;
+//         costoTotale = (costoTotale - (costoTotale * prezzoScontato)).toFixed(2);
+//         console.log(`Il prezzo del biglietto per i minorenni è di ${costoTotale}€`);
+//     } else if (userAge >= 65 && userAge < 110) {
+//         prezzoScontato = .40;
+//         costoTotale = (costoTotale - (costoTotale * prezzoScontato)).toFixed(2);
+//         console.log(`Il prezzo del biglietto per gli over 65 è di ${costoTotale}€`)
+//     } else {
+//         costoTotale = costoTotale.toFixed(2);
+//         console.log(`Il prezzo del biglietto senza sconti è di ${costoTotale}€`);
+//     }
+// } else {
+//     alert('Non hai inserito dei numeri!!');
+// }

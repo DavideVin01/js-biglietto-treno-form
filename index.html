@@ -21,8 +21,12 @@
             <input id="kms" type="text" name="kms">
         </div>
         <div>
-            <label for="age">Fascia d'età</label>
-            <select name="age" id="age">
+            <label for="age">Et&agrave; del passeggero</label>
+            <input id="age" type="text" name="age">
+        </div>
+        <div>
+            <label for="age-range">Fascia d'età</label>
+            <select name="age-range" id="age-range">
                 <option id="overage" value="overage">Maggiorenne</option>
                 <option id="underage" value="underage">Minorenne</option>
             </select>
@@ -30,11 +34,11 @@
     </section>
 
     <div id="buttons">
-        <button>Genera</button>
+        <button id="send" value="send">Genera</button>
         <button>Annulla</button>
     </div>
 
-    <section id="your-ticket">
+    <!-- <section id="your-ticket">
         <h2>IL TUO BIGLIETTO</h2>
         <h3>DETTAGLIO PASSEGGERI</h3>
         <div id="your-ticket-result">
@@ -59,7 +63,7 @@
                 <div id="ticket-cost"></div>
             </div>
         </div>
-    </section>
+    </section> -->
     <script src="js/script.js"></script>
 </body>
 
