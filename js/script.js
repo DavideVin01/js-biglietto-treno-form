@@ -46,14 +46,14 @@ buttonSend.addEventListener('click', function () {
     console.log(userAgeRangeValue);
 
 
-    buttonDelete.addEventListener('click', function () {
-        fullName.value = '';
-        userKm.value = '';
-        userAge.value = '';
-        userAgeRange.value = '';
-    })
 });
 
+buttonDelete.addEventListener('click', function () {
+    fullName.value = '';
+    userKm.value = '';
+    userAge.value = '';
+    userAgeRange.value = '';
+})
 
 
 
