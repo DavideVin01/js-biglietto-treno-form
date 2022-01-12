@@ -65,19 +65,23 @@ buttonDelete.addEventListener('click', function () {
     userAgeRange.value = '';
 })
 
+let costoTotale = userKm * 0.21;
+
+const underage = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17];
+const overage = [18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64];
+const over65 = [65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100];
 
 // #3 - #3.1
-if (!isNaN(userKm) && !isNaN(userAge)) {
+if (!isNaN(userKm) && !isNaN(userAgeRange) || (fullName)) {
 
-    let costoTotale = userKm * 0.21;
 
     let prezzoScontato = 0;
 
-    if (0 < userAge && userAge < 18) {
+    if (0 < userAgeRange && userAgeRange < 18) {
         prezzoScontato = .20;
         costoTotale = (costoTotale - (costoTotale * prezzoScontato)).toFixed(2);
         console.log(`Il prezzo del biglietto per i minorenni è di ${costoTotale}€`);
-    } else if (userAge >= 65 && userAge < 110) {
+    } else if (userAgeRange >= 65 && userAgeRange < 110) {
         prezzoScontato = .40;
         costoTotale = (costoTotale - (costoTotale * prezzoScontato)).toFixed(2);
         console.log(`Il prezzo del biglietto per gli over 65 è di ${costoTotale}€`);
@@ -85,4 +89,5 @@ if (!isNaN(userKm) && !isNaN(userAge)) {
         costoTotale = costoTotale.toFixed(2);
         console.log(`Il prezzo del biglietto senza sconti è di ${costoTotale}€`);
     }
+    ticketCost.innerText = costoTotale;
 }
