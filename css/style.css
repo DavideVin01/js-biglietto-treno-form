@@ -3,3 +3,13 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+#calcolate{
+    display: flex;
+    flex-direction: column;
+}
+
+#your-ticket-result{
+    display: flex;
+    justify-content: space-between;
+}

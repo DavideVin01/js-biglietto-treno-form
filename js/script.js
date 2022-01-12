@@ -26,7 +26,12 @@ console.log(`L'utente ha ${userAge} anni`);
 
 const fullnameElement = document.getElementById('full-name');
 const userKm = document.getElementById('kms');
-const userAge = document.getElementById('kms');
+const userAge = document.getElementById('age');
+
+userKm.value = '';
+userAge.value = '';
+
+console.log(userKm, userAge);
 
 
 // #3 - #3.1

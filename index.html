@@ -10,8 +10,8 @@
 </head>
 
 <body>
+    <h2>CALCOLA IL PREZZO DEL TUO BIGLIETTO</h2>
     <section id="calcolate">
-        <h2>CALCOLA IL PREZZO DEL TUO BIGLIETTO</h2>
         <div>
             <label for="full-name">Nome Cognome</label>
             <input id="full-name" type="text" name="full-name">
@@ -27,17 +27,37 @@
                 <option id="underage" value="underage">Minorenne</option>
             </select>
         </div>
-        <div>
-            <button>Genera</button>
-            <button>Annulla</button>
-        </div>
     </section>
+
+    <div id="buttons">
+        <button>Genera</button>
+        <button>Annulla</button>
+    </div>
+
     <section id="your-ticket">
         <h2>IL TUO BIGLIETTO</h2>
         <h3>DETTAGLIO PASSEGGERI</h3>
-        <div>
-            <div>NOME PASSEGGERO</div>
-            <span id="ticket-fullname"></span>
+        <div id="your-ticket-result">
+            <div>
+                <div>NOME PASSEGGERO</div>
+                <div id="ticket-fullname"></div>
+            </div>
+            <div>
+                <div>Offerta</div>
+                <div id="ticket-type"></div>
+            </div>
+            <div>
+                <div>Carrozza</div>
+                <div id="ticket-carriage"></div>
+            </div>
+            <div>
+                <div>Codice CP</div>
+                <div id="ticket-code"></div>
+            </div>
+            <div>
+                <div>Costo Biglietto</div>
+                <div id="ticket-cost"></div>
+            </div>
         </div>
     </section>
     <script src="js/script.js"></script>
