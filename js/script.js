@@ -58,15 +58,18 @@ buttonSend.addEventListener('click', function () {
                 prezzoScontato = .20;
                 costoTotale = (costoTotale - (costoTotale * prezzoScontato)).toFixed(2);
                 console.log(`Il prezzo del biglietto per i minorenni è di ${costoTotale}€`);
+                ticketType.innerText = 'Sconto minorile';
                 break;
             case 'over65':
                 prezzoScontato = .40;
                 costoTotale = (costoTotale - (costoTotale * prezzoScontato)).toFixed(2);
                 console.log(`Il prezzo del biglietto per gli over 65 è di ${costoTotale}€`);
+                ticketType.innerText = 'Sconto signorile';
                 break;
             case 'overage':
                 costoTotale = costoTotale.toFixed(2);
                 console.log(`Il prezzo del biglietto senza sconti è di ${costoTotale}€`);
+                ticketType.innerText = 'Biglietto standard';
         }
 
         ticketCost.innerHTML = costoTotale;
