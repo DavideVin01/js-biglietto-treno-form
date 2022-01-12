@@ -12,14 +12,14 @@ L'output del prezzo finale va messo fuori in forma umana (con massimo due decima
     3.1 - Prezzo del biglietto definito in base ai km (0.21 € al km)
     3.2 - Sconto del 20% per i minorenni
     3.3 - Sconto del 40% per gli over 65
-4 - Inserire prezzo finale con massimo due decimali (centesimi)
-*/
+    4 - Inserire prezzo finale con massimo due decimali (centesimi)
+    */
 
 // #1 - #2
 /*
 let userKm = parseInt(prompt('Quanti chilometri devi percorrere?').trim());
 let userAge = parseInt(prompt('Quanti anni hai?').trim());
-
+ 
 console.log(`I chilometri da percorrere sono ${userKm}km`);
 console.log(`L'utente ha ${userAge} anni`);
 */
@@ -29,8 +29,11 @@ const buttonDelete = document.getElementById('delete');
 
 const fullName = document.getElementById('full-name');
 const userKm = document.getElementById('kms');
-const userAge = document.getElementById('age');
 const userAgeRange = document.getElementById('age-range');
+let ticketType = document.getElementById('ticket-type');
+const ticketCarriage = document.getElementById('ticket-carriage');
+const ticketCode = document.getElementById('ticket-code');
+let ticketCost = document.getElementById('ticket-cost');
 
 buttonSend.addEventListener('click', function () {
     const fullNameValue = fullName.value;
@@ -38,9 +41,6 @@ buttonSend.addEventListener('click', function () {
 
     const userKmValue = userKm.value;
     console.log(`${userKmValue}km`);
-
-    const userAgeValue = userAge.value;
-    console.log(`${userAgeValue} anni`);
 
     const userAgeRangeValue = userAgeRange.value;
     console.log(userAgeRangeValue);
@@ -50,18 +50,20 @@ buttonSend.addEventListener('click', function () {
 
     fullName.value = '';
     userKm.value = '';
-    userAge.value = '';
     userAgeRange.value = '';
+
+    const randomCarriage = Math.floor(Math.random() * 9) + 1;
+    ticketCarriage.innerText = randomCarriage;
+
+    const randomCode = Math.floor(Math.random() * 9999) + 1;
+    ticketCode.innerText = randomCode;
 });
 
 buttonDelete.addEventListener('click', function () {
     fullName.value = '';
     userKm.value = '';
-    userAge.value = '';
     userAgeRange.value = '';
 })
-
-
 
 
 // #3 - #3.1
@@ -78,7 +80,7 @@ if (!isNaN(userKm) && !isNaN(userAge)) {
     } else if (userAge >= 65 && userAge < 110) {
         prezzoScontato = .40;
         costoTotale = (costoTotale - (costoTotale * prezzoScontato)).toFixed(2);
-        console.log(`Il prezzo del biglietto per gli over 65 è di ${costoTotale}€`)
+        console.log(`Il prezzo del biglietto per gli over 65 è di ${costoTotale}€`);
     } else {
         costoTotale = costoTotale.toFixed(2);
         console.log(`Il prezzo del biglietto senza sconti è di ${costoTotale}€`);
