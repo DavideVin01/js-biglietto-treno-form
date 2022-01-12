@@ -25,6 +25,7 @@ console.log(`L'utente ha ${userAge} anni`);
 */
 
 const buttonSend = document.getElementById('send');
+const buttonDelete = document.getElementById('delete');
 
 const fullName = document.getElementById('full-name');
 const userKm = document.getElementById('kms');
@@ -43,21 +44,15 @@ buttonSend.addEventListener('click', function () {
 
     const userAgeRangeValue = userAgeRange.value;
     console.log(userAgeRangeValue);
+
+
+    buttonDelete.addEventListener('click', function () {
+        fullName.value = '';
+        userKm.value = '';
+        userAge.value = '';
+        userAgeRange.value = '';
+    })
 });
-
-if (fullName) {
-    fullName.innerHTML = fullNameValue;
-    fullName.value = '';
-}
-
-
-
-
-
-
-
-
-
 
 
 
