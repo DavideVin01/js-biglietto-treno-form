@@ -31,10 +31,10 @@ let ticketCost = document.getElementById('ticket-cost');
 buttonSend.addEventListener('click', function () {
     if (fullName.value !== '' && userKm.value !== '' && userAgeRange.value !== '') {
 
-        const fullNameValue = fullName.value;
+        const fullNameValue = fullName.value.trim();
         console.log(fullNameValue);
 
-        const userKmValue = userKm.value;
+        const userKmValue = parseInt(userKm.value);
         console.log(`${userKmValue}km`);
 
         const userAgeRangeValue = userAgeRange.value;
@@ -85,3 +85,11 @@ buttonDelete.addEventListener('click', function () {
     userKm.value = '';
     userAgeRange.value = '';
 })
+
+// TODO: 
+/*
+-Dichiarare "your-ticket" per farlo sparire o appararire al click;
+-
+
+
+*/

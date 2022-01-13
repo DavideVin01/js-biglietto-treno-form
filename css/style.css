@@ -1,3 +1,4 @@
+/* Presets */
 * {
     padding: 0;
     margin: 0;
@@ -5,9 +6,23 @@
 }
 
 body {
-    padding: 10px;
     font-family: sans-serif;
+    background-color: red;
 }
+
+/* Utilities */
+
+.text-white{
+    color: white;
+}
+
+
+.container{
+    background-color: #B91450;
+    width: 0 auto;
+    height: 600px;
+}
+
 
 #calcolate{
     display: flex;
@@ -18,8 +33,4 @@ body {
     padding: 10px 0;
     display: flex;
     justify-content: space-around;
-}
-
-hr {
-    margin: 10px 0;
 }

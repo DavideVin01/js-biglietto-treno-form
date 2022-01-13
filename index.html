@@ -6,65 +6,68 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <title>Biglietto Treno</title>
 </head>
 
 <body>
-    <h2>CALCOLA IL PREZZO DEL TUO BIGLIETTO</h2>
-    <section id="calcolate">
-        <div>
-            <label for="full-name">Nome Cognome</label>
-            <input id="full-name" type="text" name="full-name">
-        </div>
-        <div>
-            <label for="kms">Km da percorrere</label>
-            <input id="kms" type="number" name="kms">
-        </div>
-        <div>
-            <label for="age-range">Fascia d'età</label>
-            <select name="age-range" id="age-range">
-                <option></option>
-                <option id="underage" value="underage">Minorenne</option>
-                <option id="overage" value="overage">Maggiorenne</option>
-                <option id="over65" value="over65">Over-65</option>
-            </select>
-        </div>
-    </section>
+    <div class="container">
 
-    <div id="buttons">
-        <button id="send">Genera</button>
-        <button id="delete">Annulla</button>
+        <h2>CALCOLA IL PREZZO DEL TUO BIGLIETTO</h2>
+        <section id="calcolate">
+            <div>
+                <label for="full-name">Nome Cognome</label>
+                <input id="full-name" type="text" name="full-name">
+            </div>
+            <div>
+                <label for="kms">Km da percorrere</label>
+                <input id="kms" type="number" name="kms">
+            </div>
+            <div>
+                <label for="age-range">Fascia d'età</label>
+                <select name="age-range" id="age-range">
+                    <option></option>
+                    <option id="underage" value="underage">Minorenne</option>
+                    <option id="overage" value="overage">Maggiorenne</option>
+                    <option id="over65" value="over65">Over-65</option>
+                </select>
+            </div>
+        </section>
+
+        <div id="buttons">
+            <button id="send">Genera</button>
+            <button id="delete">Annulla</button>
+        </div>
+
+        <section id="your-ticket">
+            <h2>IL TUO BIGLIETTO</h2>
+            <h3>DETTAGLIO PASSEGGERI</h3>
+            <div id="your-ticket-result">
+                <div>
+                    <div>NOME PASSEGGERO</div>
+                    <div id="ticket-fullname"></div>
+                </div>
+                <div>
+                    <div>Offerta</div>
+                    <div id="ticket-type"></div>
+                </div>
+                <div>
+                    <div>Carrozza</div>
+                    <div id="ticket-carriage"></div>
+                </div>
+                <div>
+                    <div>Codice CP</div>
+                    <div id="ticket-code"></div>
+                </div>
+                <div>
+                    <div>Costo Biglietto</div>
+                    <div id="ticket-cost"></div>
+                </div>
+            </div>
+        </section>
+        <script src="js/script.js"></script>
     </div>
-
-    <hr>
-
-    <section id="your-ticket">
-        <h2>IL TUO BIGLIETTO</h2>
-        <h3>DETTAGLIO PASSEGGERI</h3>
-        <div id="your-ticket-result">
-            <div>
-                <div>NOME PASSEGGERO</div>
-                <div id="ticket-fullname"></div>
-            </div>
-            <div>
-                <div>Offerta</div>
-                <div id="ticket-type"></div>
-            </div>
-            <div>
-                <div>Carrozza</div>
-                <div id="ticket-carriage"></div>
-            </div>
-            <div>
-                <div>Codice CP</div>
-                <div id="ticket-code"></div>
-            </div>
-            <div>
-                <div>Costo Biglietto</div>
-                <div id="ticket-cost"></div>
-            </div>
-        </div>
-    </section>
-    <script src="js/script.js"></script>
 </body>
 
 </html>
