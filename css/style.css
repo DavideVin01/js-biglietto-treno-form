@@ -12,17 +12,21 @@ body {
 
 /* Utilities */
 
-.text-white{
-    color: white;
+input,select {
+    width: 100%;
 }
 
-
-.container{
-    background-color: #B91450;
-    width: 0 auto;
-    height: 600px;
+button{
+    width: 30%;
 }
 
+.bg-red{
+    background-color: #DC3545;
+}
+
+.text-red{
+    color: #DC3545;
+}
 
 #calcolate{
     display: flex;
@@ -33,4 +37,12 @@ body {
     padding: 10px 0;
     display: flex;
     justify-content: space-around;
+}
+
+#your-ticket{
+    display: none;
+}
+
+#your-ticket.visible{
+    display: flex;
 }

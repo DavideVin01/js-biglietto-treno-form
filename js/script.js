@@ -27,6 +27,7 @@ let ticketType = document.getElementById('ticket-type');
 const ticketCarriage = document.getElementById('ticket-carriage');
 const ticketCode = document.getElementById('ticket-code');
 let ticketCost = document.getElementById('ticket-cost');
+const ticketForm = document.getElementById('your-ticket');
 
 buttonSend.addEventListener('click', function () {
     if (fullName.value !== '' && userKm.value !== '' && userAgeRange.value !== '') {
@@ -53,6 +54,7 @@ buttonSend.addEventListener('click', function () {
         let prezzoScontato = 0;
         let tipoUtente = userAgeRange.value;
 
+
         switch (tipoUtente) {
             case 'underage':
                 prezzoScontato = .20;
@@ -72,12 +74,17 @@ buttonSend.addEventListener('click', function () {
                 ticketType.innerText = 'Biglietto standard';
         }
 
-        ticketCost.innerHTML = costoTotale;
+        ticketCost.innerHTML = costoTotale + '€';
+
+        ticketForm.classList.add('visible');
 
         fullName.value = '';
         userKm.value = '';
         userAgeRange.value = '';
+
     }
+
+
 });
 
 buttonDelete.addEventListener('click', function () {
@@ -85,11 +92,3 @@ buttonDelete.addEventListener('click', function () {
     userKm.value = '';
     userAgeRange.value = '';
 })
-
-// TODO: 
-/*
--Dichiarare "your-ticket" per farlo sparire o appararire al click;
--
-
-
-*/
